@@ -48,35 +48,24 @@ attach(Emerus_pollsup)
 boxplot((Emerus_pollsup$Seeds[Test=="PS"]), (Emerus_pollsup$Seeds[Test== "N"]),
         names= c("Pollen Supplementation", "Normal"), main= "Total number of seeds(2023)", col = c("violet", "yellow"))
 
-bartlett.test(Seeds ~ Test)       #verifica che le varianze siano omogenee
-    ## > bartlett.test(Seeds ~ Test)       #verifica che le varianze siano omogenee
 
-    ##	Bartlett test of homogeneity of variances
+bartlett.test(Seeds ~ Test) #verifica che le varianze siano omogenee
+#H0=variance in each group is the same.
+#p-value=0.85 --> no evidence against H0 so the two variances are equal
 
-    ## data:  Seeds by Test
-    ## Bartlett's K-squared = 0.034128, df = 1, p-value = 0.8534
-
-
-shapiro.test(Seeds[Test=="N"])   #verifica la normalità
-   ##> shapiro.test(Seeds[Test=="N"])   #verifica la normalità
-
-   ##Shapiro-Wilk normality test
-
-   ##data:  Seeds[Test == "N"]
-   ##W = 0.80368, p-value = 0.01052
-
+shapiro.test(Seeds[Test=="N"])#verifica la normalità
+#H0=data come from a normal distribution
+#p-value=0.01 --> moderate evidence against H0 [so actually they may not come from a not normal distribution????]
 shapiro.test(Seeds[Test=="PS"])  #verifica la normalità
-   ##> shapiro.test(Seeds[Test=="PS"])  #verifica la normalità
+#H0=data come from a normal distribution
+#p-value=0.07 --> weak evidence against H0 so data come from a normal distribution
 
-   ##Shapiro-Wilk normality test
-
-   ##data:  Seeds[Test == "PS"]
-   ##W = 0.85508, p-value = 0.06674
-
-
+#we are testing that the number of seeds depend from the tests we are doing
+#H0=number of seeds depend from the tests we are doing
 model1 <- lm(Seeds ~ Test, data  =  Emerus_pollsup)
 summary(model1)
-
+#P-value=0.14 no evidence against H0 so the number of seeds depend from the test we are doing
+#comment on R^2?
 
 ########################### updated dataset (old+new)  ############################
 #### reproductive strategies
