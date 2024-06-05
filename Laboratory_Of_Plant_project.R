@@ -46,7 +46,8 @@ Emerus_repstrat$ratio <- round(Emerus_repstrat$ratio, 2)
 
 freq.tab <- table(Emerus_repstrat$ratio [Emerus_repstrat$ratio>0])
 prop.table(freq.tab)
-barplot(prop.table)  ###vediamo tra i frutti che hanno seed>0 che efficienza ci sia rispetto al massimo di 7
+barplot(freq.tab, xlab = "Seed ratio", ylab = "Frequency", title("Reproduction efficiency 2023"))
+###vediamo tra i frutti che hanno seed>0 che efficienza ci sia rispetto al massimo di 7
 
 
 ########################### POLLEN SUPPLEMENTATION ####################à
