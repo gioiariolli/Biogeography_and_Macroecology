@@ -11,7 +11,7 @@ boxplot((Emerus_repstrat$Seeds[Test=="A"]), (Emerus_repstrat$Seeds[Test== "SS"])
         names= c("Agamospermy", "Spontaneous selfing", "Control"), main= "Tot seeds")
 
 
-##### binomial family ## NON SERVE
+##################### binomial family ## NON SERVE#####################à
 modello <- glm(cbind(Seeds, Abortive_ovules) ~ Test, family = binomial,
                data = Emerus_repstrat)
 summary(modello)
@@ -39,6 +39,15 @@ odstry
 summary(modello_try)
 
 pairs(emmeans(modello_try ~ Test))
+
+### per valutare reproduction efficiency: ratio tra numero massimo (medio) di semi totali (sviluppati+abortiti, ovvero 7) e numero di semi sviluppati:
+Emerus_repstrat$ratio <- Emerus_repstrat$Seeds/7
+Emerus_repstrat$ratio <- round(Emerus_repstrat$ratio, 2)
+
+freq.tab <- table(Emerus_repstrat$ratio [Emerus_repstrat$ratio>0])
+prop.table(freq.tab)
+barplot(prop.table)  ###vediamo tra i frutti che hanno seed>0 che efficienza ci sia rispetto al massimo di 7
+
 
 ########################### POLLEN SUPPLEMENTATION ####################à
 Emerus_pollsup <- read.table("PollSup_Emerus2023.txt", header=TRUE, sep = "")
