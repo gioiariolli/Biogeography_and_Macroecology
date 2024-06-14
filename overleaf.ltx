@@ -1,0 +1,127 @@
+%%% Notice: This file contains a large number of \verb's 
+%%%         or verbatim environments in order to display command names
+%%%         or examples.  But the use of \verb/verbatim is *not* recommended. 
+%%% ver.7 2018/05/15 
+\documentclass{pasj01}
+%\draft 
+\Received{$\langle$6th June 2024$\rangle$}
+\Accepted{$\langle$14th June 2024$\rangle$}
+\Published{$\langle$18th June 2024$\rangle$}
+%% \SetRunningHead{Univerisity of Bologna}{Usage of \texttt{Department of Biological and Geological Sciences}}
+
+
+\begin{document}
+
+\title{ The assessment of the mating system and reproductive success of \textit{Emerus major} as a tool for developing efficient conservation plans on Mediterranean biodiversity} 
+\author{Bianco Stefania, Marion Anna, and Riolli Gioia}%
+\altaffiltext{}{Global Change Ecology and Sustainable Development Goals, Department of Biological and Geological Sciences (BiGea), University of Bologna, Italy}
+\email{anna.marion@studio.unibo.it , stefania.bianco2@studio.unibo.it , gioia.riolli@studio.unibo.it}
+
+\KeyWords{Pollen supplementation${}_1$ --- Emerus major${}_2$ --- Pollen strategy${}_3$ --- Reproductive strategies${}4$ --- Mediterranean plants${}_5$}
+
+\maketitle
+
+\begin{abstract}
+With the advance of climate change, it appears everyday more crucial assessing on a broader scale the loss of biodiversity in particularly vulnerable regions such as the Mediterranean one. The latter is extremely rich in species with a wide range distribution of characteristics among the different families. 
+In particular, the study investigated the reproductive strategies of the leguminosae \textit{E. major}, asking wheter it reproduced through \textit{Agamospermy} \textbf{(A)}, \textit{Spontaneous-Selfing} \textbf{(SS)} or neither of them, and if any pollination limitation were present. The data have been collected through direct sampling in the study site, the Orto Botanico of Bologna, applying 4 different tests to the plant.
+The collected data have been further tested for normality in \texttt{R} and analysed with the LM statistical model, but this will be better discussed in section \textit{2}. The results confirmed what previous researches had already demonstrated: (i) \textit{Coronilla emerus} L. doesn't reproduce either via agamospermy and spontaneous-selfing, (ii) a lack of statistical significant difference between the pollen supplementation test and the control . However, further investigations should be done on the topic to increase our common knowledge on Mediterranean plants reproductive strategies.
+
+\end{abstract}
+
+
+\section{Introduction}
+
+
+
+
+\subsection{The studied species}
+This paper focused on \textit{Coronilla emerus} L. , a woody-perennial shrub species belonging to the subfamily of \textit{Fabaceae} (Aronne et al, 2012). The whole subfamily counts approximately 17 tribes, 79 genera and 1792 species (Greuter et al. 1989), with endemic and rare taxa being widely represented as well \bigskip.
+The morphological and functional traits of the plant have been shaped under the pollinators selective pressure presenting a crown-shaped inflorescence with often 5 yellow flowers, with long pedicels. 
+
+The complex of keel and wings serves as a landing platform for insects visiting the flower from the front. 
+
+\subsection{Pollination and pollinators}
+The complex of keel and wings serves as a landing platform for insects visiting the flower from the front. 
+The Fabaceae family evolved under the selective pression of bee pollinators, developping four main pollination mechanisms, cassified as follows: explosive, valvular, piston, and brush. E. major evolved a piston mechanism, 
+A nectary is placed at the base of the flower limited to the area of the receptacle. Between the joined and the free filaments there are two small fenestrae which allow access to the nectar. The distal parts of the filaments are free. They are clavate and have an enlarged flat apex. An erect anther tops the filament. The ovary lies in the sheath of the filaments along the cylindrical part of the keel.The whole pistil has the same length as the stamens. 
+\subsection{Different reproductive strategies}
+As suggested in the literature (Galloni et al., 2007), information about the breeding system of a plant can be obtained through direct analysis of resource allocation in reproduction and with direct estimation of seed productivity and viability in natural populations. \bigskip
+\section{Materials and methods}
+\subsection{Study site}
+
+\subsection{Data analysis}
+The data analysis was performed first by inserting the obtained data on an Excel file, and then by importing the file on \texttt{R}. 
+\smallskip Regarding the reproductive strategies data, (ADD WHAT WE DID).
+\smallskip Regarding the pollen supplementation data, a boxplot was created showing the number of seeds produced during the two tests ("Pollen supplementation and "Control"). For the inferential statistic, we first checked whether the variances were equal with Bartlett test, and then if the data were normally distributed with Shapiro test. Having obtained P-values high enough, we carried out our research asking if there is a linear relationship within the number of seeds produced and the test performed.
+ 
+
+\section{Results}
+\subsection{Reproductive strategies}
+To analyze the results obtained by testing the reproductive strategies of \textit{E. major} during the year 2023, some descriptive analysis statistics on \texttt{R} were done. The boxplot in figure 1 shows that the number of seeds produced through agamospermy and spontaneous selfing is 0. This information suggests that the plant does not reproduce through agamospermy (defined as clonal reproduction through seeds) and it is not self-compatible. 
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{repstrat2023.png}
+\caption{Number of seeds produced for the following test: "Agamospermy", "Spontaneous Selfing" and "Control", 2023}
+\end{figure}
+
+\bigskip
+
+2024 spring had very peculiar meteorological conditions: heat waves, intense rains and wind were occurring during the season. Aronne at al. [1] well explained how the pollen viability and germination is strictly depend on the humidity and temperature: the warmer and more humid the environment is, the quicker is the loss of viability. This quick loss is due to the protoandreous mechanism: self-fertilisation is avoided because pollen is viable and released before the stigma becomes receptive. However, to avoid selfing, the earlier release of the pollen must be accompanied by a rapid loss of its viability. It is reported that pollen hydration activates physiological processes that make the pollen more susceptible to heat stress. However, in normal condition, the limited lifespan of pollen grains of this species does not prevent reproductive success due to the rapid transport by pollinators. As the weather was alternating rains and heat waves, both quicker loss of pollen viability might have occurred, accompanied by a lack of pollinators, discouraged in their foraging from the external conditions. 
+This setting did not help to get significative results from the experiment of this year. Indeed, a lot of flowers did not produce fruits, or at least we did not find them. This is the reason why we decided to join the results of this year to the ones of last year. The number of seed produced was still 0 for the agamospermy and spontaneous selfing test, confirming what was stated previously, whereas for the control the number of seeds was lower compared to the data of the previous year, with two outliers.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{repstrat2024.png}
+\caption{Number of seeds produced for the following test: "Agamospermy", "Spontaneous Selfing" and "Control", 2024}
+\end{figure}
+
+\subsection{Pollen supplementation}
+Analyzing the pollen supplementation test, a boxplot showed in figure 2 was obtained, showing a slightly higher number of seeds when pollen supplementation was performed. To further proof this relationship between number of seeds and test performed, a test on \texttt{R} was made (linear model). The function \texttt{lm} was used, and a P-value of 0.14 was obtained, suggesting no evidence against H0. The statistical test suggests the number of seeds does not significantly depend on the treatment done (pollen supplementation or control). 
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{pollsup2023.png}
+\caption{Number of seeds produced for the following test: "Pollen supplementation" and "Control", 2023}
+\end{figure}
+
+\bigskip
+
+Also in this case, by joining the results of this year and of the previous year, we obtained a lower number of seeds produced. Still, the number of seed and the test performed showed no significant correlation, with an high p-value obtained by performing the \texttt{lm} test on \texttt{R}, that presents as Null Hypothesis "Correlation parameters are equals to 0". 
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{pollsup2024_1.png}
+\caption{Number of seeds produced for the following test: "Pollen supplementation" and "Control", 2023}
+\end{figure}
+
+\section{Discussion}
+ Changes in plants' biodiversity have always occurred in Earth's history, hence with a lower amplitude and on a smaller scale (Gritti et al, 2005). Studying the mechanisms that lie behind plants' mating systems and their reproduction, can possibly lead to  the assessment of urgent conservation plans for the recovery and reintroduction of native species in vulnerable areas (Casazza et al, 2014)\bigskip.
+ In fact, predictions are essential for alerting scientists and decision-makers to potential risks, aiding in the development of proactive strategies to mitigate its impact on biodiversity (Casazza et al, 2014) \bigskip. [CONTESTUALIZZARE CON EMERUS CHE NON è ENDANGERED MA COMUNQUE SERVE CONSERVATION]
+ 
+\subsection{Reproductive strategies}
+The first finding (\textit{E.major} does not reproduce through agamospermy) is in line with the literature; as regard the second one (\textit{E.major} does not reproduce through spontaneous selfing) it has been shown that even in small proportions, \textit{Emerus major} can be autogamous [1]. In general, the plant developed two major mechanisms to avoid selfing: it is protandrous and it has a stigmatic cuticle that needs to be broken in order to allow the pollen to reach the stigma. To do this, insect visits are needed, or any other mechanical pressure. In our experiment, to test spontaneous selfing we did not touch at all the flowers, leaving the stigmatic cuticle intact and this is the reason why no seeds were developed through spontaneous selfing. This is in line with the research of Aronne et al. [1], that stated that no seeds were produced from flowers left untouched both from pollinators and researchers.
+
+\subsection{Pollination limitation}
+The lack of significant difference within the "Pollen supplementation" and "Control" test may be due to a good hand-pollination work that was done during the experiment.
+\smallskip However, the number of seeds is still slightly higher when we perform the pollen supplementation test compared to when we leave the plant to it natural pollinators alone: this may suggest a lack of pollinators insect around the plant. This lack may be due to the surrounding environment of the plant, that is a botanical garden in the middle of a city of almost 400 000 inhabitants in an highly industrialized and polluted areas, but also it can be correlated to the general trend of biodiversity erosion and pollinator loss or to the bad meterological conditions had during the experiment. As other plants of the Leguminosae family, \textit{Emerus major} co-evolved with its pollinators and its pollination mechanism (piston) strictly relies on the insects. When less animals are present, pollination and subsequently fertilization are less likely to occur. When we pollinated the plants, we increased the chance of fertilization and then more seeds were produced, even though the difference within tests in this case was not that significative. 
+This result is in contrast with the experiment of Aronne et al.[1]: in their hand-pollination experiments, reproductive success was lower than in free-pollinated flowers even in the case of cross-pollination. They hypothesized the difference was due to the stigmatic cuticle that was not properly ruptured during hand-pollination performance. In our opinion, the difference within our experiment and Aronne et al. [1] experiment may be due to the surrounding setting and/or to the bad weather condition. They were studying the plant in a more natural and wild environment than we were, so it was more likely that more pollinators insects were spontaneously visiting the flowers and making a better job than humans may do. 
+
+\subsection{Conservation perspective}
+
+\section{Acknowledgments}
+We would like to thank the staff of the botanical garden and herbarium of Bologna for permitting sample collection and giving us access to their buildings and facilities. We also would like to thank Dr. M. Galloni for guiding us during the draft of the manuscript, and Dr. M. Barberis for her helpful technical comments on the \texttt{R} usage.
+\begin{thebibliography} {999} 
+\bibitem[Aronne et al., 2012]{Aronne, 2012}
+\bibitem[Galloni et al., 2007]{Galloni, 2007}
+\bibitem[Casazza et al., 2014]{Casazza, 2014}
+\bibitem[Gritti et al., 2012]{Gritti, 2005}
+Aronne, G., Giovanetti, M., & De Micco, V. (2012). Morphofunctional traits and pollination mechanisms of Coronilla emerus L. flowers (Fabaceae). The Scientific World Journal/TheScientificWorldjournal, 2012, 1–8. https://doi.org/10.1100/2012/381575 [1]\bigskip
+
+Casazza G. ,Giordani  P. , Benesperi R. et al. (2014). Climate change hastens the urgency of conservation for range-restricted plant species in the central-northern Mediterranean region. https://doi.org/10.1016/j.biocon.2014.09.015 [2]\bigskip
+
+Galloni, M., Podda, L., Vivarelli, D. et al. (2007). Pollen presentation, pollen-ovule ratios, and other reproductive traits in Mediterranean Legumes (Fam. Fabaceae - Subfam. Faboideae). Plant Syst. Evol. 266, 147–164. https://doi.org/10.1007/s00606-007-0526-1 [3]\bigskip
+
+Gritti E. S. , Smith B. , Sykes M. T. (2005). Vulnerability of Mediterranean Basin ecosystems to climate change and invasion by exotic plant species.  https://doi.org/10.1111/j.1365-2699.2005.01377. [4]\bigskip
+
+
+\end{thebibliography}
+
+\end{document}
+
