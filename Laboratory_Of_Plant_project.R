@@ -88,7 +88,7 @@ summary(model1)
 #anna# R^2=0.1085 suggests that about 10.8% of the variability in seed counts can be explained by the indipendent 
 #anna# variable (Test) through the model used (Lineal model)
 
-########################### updated dataset (old+new)  ############################
+########################### updated dataset (old+new)  ############################  2024
 #### reproductive strategies
 EmerusUpdate_repstrat <- read.table("RepStrat_EmerusUpdate.txt", header=TRUE, sep = "")
 summary(EmerusUpdate_repstrat)
@@ -151,3 +151,12 @@ summary(model1update)
 #anna# as before, the difference between tests appears to not be statistically significant (high p-value)
 #anna# here, R^2 is even lower, showing that the model might not be fitted for the dataset used, since the value
 #anna# tells only 1% of variability in seeds production can be explained/caused by the conditions (tests)
+
+##plotting efficiency: for the fruits that actually were productive, how many seeds did they produce?
+ratiotot2024 <- c(EmerusUpdate_repstrat$Seeds/7, EmerusUpdate_pollsup$Seeds/7)
+length(ratiotot2024)
+ratiotot2024 <- round(ratiotot2024, 2)
+freq.tabtot2024 <- table(ratiotot2024 [ratiotot2024>0])
+prop.table(freq.tabtot2024)
+barplot(freq.tabtot2024, xlab = "Seed ratio", ylab = "Frequency", title("Reproduction efficiency 2024"))
+plot.new()
